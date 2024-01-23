@@ -40,16 +40,6 @@ buttons.forEach((elem) =>{
         e.target.disabled = true
         pacchetti = pacchetti.filter(pacchetto => pacchetto.numero != id)
         console.log(pacchetti)
-
-
-        const pacchettoSelezionato = pacchetti.find((pacco) => pacco.numero === id);
-        if (pacchettoSelezionato) {
-            const valorePacchetto = pacchettoSelezionato.valore;
-            console.log(`Valore del pacchetto associato al bottone ${id}: € ${valorePacchetto}`);
-        } else {
-            console.error(`Pacchetto non trovato per il bottone ${id}`);
-        }
-
     })
 })
 
