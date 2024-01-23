@@ -1,12 +1,8 @@
 // Affari Tuoi 22/01/2024, Axel e Giacomo
 
 let pacchetti = []
-
 let valori = [0, 1, 5, 10, 20, 50, 75, 100, 200, 500, 5000, 10000, 15000, 20000, 30000, 50000, 75000, 100000, 200000, 300000]
 let numeri = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-
-let pacchiBlu = [0, 1, 5, 10, 20, 50, 75, 100, 200, 500]
-let pacchiRed = [5000,10000, 15000, 20000, 30000, 50000, 75000, 100000, 200000, 300000]
 
 
 //Creo le coppie numero-valore e le inserisco come oggetto in pacchetti
@@ -53,21 +49,4 @@ function getRandomAndRemove(array) {
     const randomElement = array[randomIndex];
     array.splice(randomIndex, 1);
     return randomElement;
-}
-
-
-//Inserimento dei valori pacchiBlu e pacchiRossi nelle barre laterali
-const leftBar= document.querySelector(".c1")
-const rightBar = document.querySelector(".c3")
-
-for (let i=0; i<pacchiBlu.length; i++) {
-    leftBar.innerHTML += `<div class="pacchiBlu">` +
-        `<h1>€ ${pacchiBlu[i]}</h1>` +
-        `</div>`
-}
-
-for(let i=0; i<pacchiRed.length; i++) {
-    rightBar.innerHTML += `<div class="pacchiRed">` +
-        `<h1>€ ${pacchiRed[i]}</h1>` +
-        `</div>`
 }
