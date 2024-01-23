@@ -30,6 +30,7 @@ pacchetti.forEach((pacco) =>{
     console.log(pacco);
 })
 
+
 //Rimozione oggetto pacchetto da array pacchetti e disabilitazione bottone
 const buttons = document.querySelectorAll(".grid-button")
 buttons.forEach((elem) =>{
@@ -53,28 +54,6 @@ buttons.forEach((elem) =>{
 })
 
 
-//Rimozione dagli array pacchiRed e pacchiBlu
-/*
-buttons.forEach((elem) => {
-    elem.addEventListener("click", (e) => {
-        const id = Number(e.target.id);
-        const pacchettoSelezionato = pacchetti.find((pacco) => pacco.numero === id);
-
-        if (pacchettoSelezionato) {
-            const valorePacchetto = pacchettoSelezionato.valore;
-            console.log(`Valore del pacchetto associato al bottone ${id}: € ${valorePacchetto}`);
-        } else {
-            console.error(`Pacchetto non trovato per il bottone ${id}`);
-        }
-
-        e.target.disabled = true;
-        pacchetti = pacchetti.filter((pacchetto) => pacchetto.numero !== id);
-    });
-});
-
-
- */
-
 function getRandomAndRemove(array) {
     if (array.length === 0) {
         console.error("L'array è vuoto.");
@@ -86,6 +65,7 @@ function getRandomAndRemove(array) {
     return randomElement;
 }
 
+
 //Inserimento dei valori pacchiBlu e pacchiRossi nelle barre laterali
 const leftBar= document.querySelector(".c1")
 const rightBar = document.querySelector(".c3")
@@ -96,23 +76,8 @@ for (let i=0; i<pacchiBlu.length; i++) {
         `</div>`
 }
 
-for(let i=0; i<pacchiRed.length; i++){
-    rightBar.innerHTML+= `<div class="pacchiRed">` +
-        `<h1>€ ${pacchiRed[i]}</h1>`+
+for(let i=0; i<pacchiRed.length; i++) {
+    rightBar.innerHTML += `<div class="pacchiRed">` +
+        `<h1>€ ${pacchiRed[i]}</h1>` +
         `</div>`
 }
-
-/*
-function aggiornaNumeri(){
-    leftBar.innerHTML = ""
-    rightBar.innerHTML = ""
-
-    leftBar.innerHTML += `<div class="pacchiBlu">` +
-        `<h1>€ ${pacchiBlu[i]}</h1>`+
-        `</div>`
-
-    rightBar.innerHTML+= `<div class="pacchiRed">` +
-        `<h1>€ ${pacchiRed[i]}</h1>`+
-        `</div>`
-}
-*/
