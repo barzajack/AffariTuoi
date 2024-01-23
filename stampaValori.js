@@ -27,15 +27,9 @@ btns.forEach((elem) => {
 
         const pacchetto = {
             numero: id,
-            valore: pacchetti.filter(p => p.numero === id)?.valore || `Valore${id}`
+            valore: 2
         };
 
         const index = pacchetti.findIndex(p => p.numero === id);
-
-        if (index === -1) {
-            console.log("Oggetto non trovato");
-        } else {
-            console.log(pacchetti[index].valore);
-        }
     });
 });
